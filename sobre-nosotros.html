@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Luna di Seda</title>
+    <link rel="stylesheet" href="indexstyle copy.css">
+</head>
+<body>
+<div id="header-div">
+    <nav class="header">
+        <div class="menu" id="menu">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-links">
+                <a href="index.html">Inicio</a>
+                <div id="contenedor"><a href="#">Menú</a>
+                    <div class="container">
+                        <a href="menu.html">Nuestros Platos</a>
+                        <a href="carta-de-vinos.html">Carta de Vinos</a>
+                        <a href="especialidades.html">Especialidades</a>
+                    </div>
+                </div>
+                <a href="sobre-nosotros.html">Nuestra Historia</a>
+                <a href="contactanos.html">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="hero-section">
+    <div class="logo">
+        <img src="img/Picture1.png" alt="Logo Luna di Seda">
+    </div>
+    <p class="hero-tagline">Tradición y Sabor Italiano</p>
+</div>
+
+<section class="about-summary">
+    <div class="about-content">
+        <h1>Nuestra Historia</h1>
+        <div class="intro-text">
+            <p>Somos más que un lugar donde se sirve comida: somos una experiencia que celebra la tradición, el sabor y la calidez de Italia. Desde 1992, traemos la auténtica esencia napolitana a El Salvador.</p>
+        </div>
+    </div>
+</section>
+
+<section class="image-carousel-section">
+    <a href="#" class="carousel-button">Momentos Destacados</a>
+    <div class="image-carousel">
+        <img class="mySlides" src="https://crearal.com/wp-content/uploads/2023/12/c%C3%B3mo-decorar-un-restaurante-italiano.jpg" alt="Interior de restaurante italiano">
+        <img class="mySlides" src="https://media.scoolinary.app/blog/images/2023/06/Corelli37Captura-de-Pantalla-2023-05-30-a-las-18.07.27-scaled.jpg" alt="Chef preparando pasta fresca">
+        <img class="mySlides" src="https://bresca.es/wp-content/uploads/2022/09/blog-mesa-italiana.jpg" alt="Mesa de restaurante con platos italianos">
+    </div>
+</section>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2000);
+}
+
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
+</script>
+
+<section class="history-section">
+    <div class="history-card">
+        <div class="history-text">
+            <h2>La Historia de "Luna di Seda"</h2>
+            <p>
+                Fundado por Don Luca, un napolitano enamorado de El Salvador,
+                Luna di Seda nació en 1992 para compartir el sabor de
+                Italia con ingredientes locales frescos y recetas tradicionales.
+                Hoy, sus hijos mantienen viva la pasión familiar con pizzas
+                artesanales, pastas caseras y vinos elegidos con corazón.
+            </p>
+        </div>
+        <div class="history-gallery">
+            <div class="scroll-container" id="scroll-container">
+                <img src="https://media-cdn2.greatbritishchefs.com/media/kv5jl0rq/img48246.jpg" alt="Antiguo chef italiano">
+                <img src="https://images.adsttc.com/media/images/61f3/7151/3e4b/3184/b600/0007/newsletter/PORTADA_50FRIENDS_01.jpg?1643344203" alt="Interior acogedor de restaurante">
+                <img src="https://cloudfront-us-east-1.images.arcpublishing.com/dmn/OP6ABBJP2BDTRPS6WEQXSDI3HU.jpg" alt="Cocina de restaurante con chef">
+                <img src="https://www.laespanolaaceites.com/wp-content/uploads/2019/05/pasta-fresca-casera.jpg" alt="Preparación de pasta">
+                <img src="https://media.istockphoto.com/id/468441873/es/foto/restaurante-italiano.jpg?s=612x612&w=0&k=20&c=xlVr4sHSwu2J3hgc3o--S8UzJoECnVXcRWvqIDjpy9o=" alt="Antiguo restaurante italiano">
+                <img src="https://media.istockphoto.com/id/2077442770/es/foto/hombre-feliz-disfrutando-del-desayuno-con-su-familia-mientras-se-hospeda-en-un-hotel.jpg?s=612x612&w=0&k=20&c=1Y3TjAQrjrsJjAXTw47atLjmLwrRFXYiNtB0qjDAJTI=" alt="Familia disfrutando en un restaurante">
+                <img src="https://blogdestinia.com/wp-content/uploads/2023/02/pueblos-de-italia-rutas-del-vino-3-scaled.jpg" alt="Viñedo italiano">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const scrollContainer = document.getElementById('scroll-container');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      scrollContainer.classList.add('active');
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    });
+
+    scrollContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      scrollContainer.classList.remove('active');
+    });
+
+    scrollContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+</script>
+
+<footer class="footer">
+    <ul class="menu-footer">
+        <li class="menu-elem">
+            <a href="index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="menu.html" class="menu-icon">Nuestros Platos</a>
+        </li>
+        <li class="menu-elem">
+            <a href="sobre-nosotros.html" class="menu-icon">Nuestra Historia</a>
+        </li>
+        <li class="menu-elem">
+            <a href="contactanos.html" class="menu-icon">Contáctanos</a>
+        </li>
+    </ul>
+    <div class="store-buttons">
+        <a href="#"><img src="img/disponibilidad app store.png" class="appstore" alt="Disponible en App Store"></a>
+        <a href="#"><img src="img/disponibilidad play store.png" alt="Disponible en Play Store" class="playstore"></a>
+    </div>
+    <p class="footer-text"> COPYRIGHT © 2025 - LUNA DI SEDA </p>
+</footer>
+
+</body>
+</html>

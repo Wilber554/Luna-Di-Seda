@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Il Sapore Italiano</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+<body>
+<div id="header-div">
+<nav class="header"> 
+    <div class="menu" id="menu"> 
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div> 
+        <div class="menu-links"> 
+            <a href="index.html">Inicio</a> 
+            <div id="contenedor"><a href="#">Menú
+                    <div class="container">
+                        <a href="Especialidades.html">Especialidades</a>
+                        <a href="carta-de-vinos.html">Carta de Vinos</a>
+                        <a href="menu.html">Platos Principales</a>
+                    </div>
+                </a>
+            </div>
+            <a href="sobre-nosotros.html">Nuestra Historia</a> 
+            <a href="contactanos.html">Contáctanos</a> 
+        </div> 
+    </div> 
+</nav> 
+</div>
+
+<div class="Carrusel-title">
+    <h1>Nuestros Platillos</h1>
+    <p>Bienvenido a tu único restaurante italiano preferido. ¿Qué platillo deseas comer hoy?</p>
+</div>
+
+<div class="Carrusel">
+    <div><a href=""><img src="img/Raviolis.jpg" alt="Ravioles"></a></div>
+    <div><a href=""><img src="img/comida1.jpg" alt="Plato de comida italiana"></a></div>
+    <div><a href=""><img src="img/lasagna.jpeg.jpg" alt="Lasaña"></a></div>
+    <div><a href=""><img src="img/pasta-carbonara.jpeg.jpg" alt="Pasta Carbonara"></a></div>
+    <div><a href=""><img src="img/pizza.png" alt="Pizza"></a></div>
+    <div><a href=""><img src="img/Raviolis.jpg" alt="Ravioles"></a></div>
+    <div><a href=""><img src="img/ensalada-mediterranea.jpg" alt="Ensalada Mediterránea"></a></div>
+    <div><a href=""><img src="img/lasagna.jpeg.jpg" alt="Lasaña"></a></div>
+    <div><a href=""><img src="img/pasta-carbonara.jpeg.jpg" alt="Pasta Carbonara"></a></div>
+    <div><a href=""><img src="img/pizza.png" alt="Pizza"></a></div>
+</div> 
+
+<div>
+    <div class="sobrenosotros">
+        <div class="img-container">
+            <img src="img/comida italiana.jpeg" alt="Comida Italiana en mesa">
+            <div class="img-overlay"></div>
+            <a href="comida.html" id="btn"><button class="hover-button">Ver Menú</button></a>
+        </div>
+        <div class="sobrenosotros-texto">
+            <h1>Descubre nuestro Menú aquí</h1>
+            <p class="p-sobrenosotros"> <b class="sabor">¡Descubre el sabor auténtico de Italia! </b>
+                Nuestro menú italiano te invita a un viaje culinario lleno de tradición y pasión: 
+                desde una lasaña casera con salsa bechamel cremosa, hasta una pizza artesanal con 
+                ingredientes frescos y masa crujiente. Cada plato está preparado con amor y recetas que 
+                evocan el corazón de la Toscana. <b class="conquistar">¡Ven y déjate conquistar por el encanto de la cocina italiana!</b>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="sb">
+    <div class="sb-contenido">
+        <h1 class="sb-h1">Nuestra Historia</h1>
+        <p class="sb-txt">
+            Conoce más sobre nuestra Historia, Cultura y Fundación.
+        </p>
+    </div>
+    <div class="sb1">
+        <img src="img/sobrenosotros-3.jpg" alt="Interior de restaurante antiguo">
+    </div>
+    <a href="sobre-nosotros.html" id="btn-1"><button class="identidad-btn">Sobre nosotros</button></a>
+</div>
+
+<div>
+    <div class="cts">
+        <div class="cts-img">
+            <img src="img/restaurante-el-italiano.jpg" alt="Interior de restaurante italiano">
+            <div class="cts-overlay"></div>
+        </div>
+        <div class="cts-texto">
+            <img src="img/Picture1.png" alt="Logo Luna Di Seda">
+            <p class="p-cts"> Luna Di Seda tiene la capacidad de sentir los auténticos sabores italianos, visítanos en nuestras sucursales y disfruta de nuestro sabor exclusivamente italiano.
+            </p>
+            <a href="contactanos.html" id="btn-2"><button class="visitanos-btn">Visítanos</button></a>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="menu-footer">
+        <li class="menu-elem">
+            <a href="index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="menu.html" class="menu-icon">Nuestros Platos</a>
+        </li>
+        <li class="menu-elem">
+            <a href="sobre-nosotros.html" class="menu-icon">Nuestra Historia</a>
+        </li>
+        <li class="menu-elem">
+            <a href="contactanos.html" class="menu-icon">Contáctanos</a>
+        </li>
+    </ul>
+    <div class="store-buttons">
+        <a href="#"><img src="img/disponibilidad app store.png" class="appstore" alt="Disponible en App Store"></a>
+        <a href="#"><img src="img/disponibilidad play store.png" alt="Disponible en Play Store" class="playstore"></a>
+    </div>
+    <p class="footer-text"> COPYRIGHT © 2025 - LUNA DI SEDA </p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Luna di Seda</title>
+    <link rel="stylesheet" href="indexstyle copy.css">
+</head>
+<body>
+<div id="header-div">
+    <nav class="header">
+        <div class="menu" id="menu">
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-links">
+                <a href="index.html">Inicio</a>
+                <div id="contenedor"><a href="#">Menú</a>
+                    <div class="container">
+                        <a href="especialidades.html">Especialidades</a>
+                        <a href="carta-de-vinos.html">Carta de Vinos</a>
+                        <a href="menu.html">Nuestros Platos</a>
+                    </div>
+                </div>
+                <a href="sobre-nosotros.html">Sobre Nosotros</a>
+                <a href="contactanos.html">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="main-content">
+    <div class="title-section">
+        <h1>Contáctanos</h1>
+    </div>
+
+    <div class="contact-section">
+        <div class="contact-info">
+            <p>¿Tienes dudas, reservas o sugerencias? Estamos para ayudarte.</p>
+            <p><strong>Teléfono:</strong> +503 22XX-XXXX</p>
+            <p><strong>Horario:</strong> Lunes a Domingo - 11:00 AM a 10:00 PM</p>
+            <p><strong>Ubicación:</strong> 56 Av Sur, frente al Banco de América Central, San Salvador, El Salvador.</p>
+            <p class="reservation-text">Haz tu reservación a nuestro número de teléfono</p>
+
+            <div class="toggle-button" onclick="toggleContenido()">¡Ordena ya!</div>
+
+            <div id="contenido" class="extra-content">
+                <a href="carta-de-vinos.html" class="action-link">Compra nuestros vinos</a>
+                <a href="especialidades.html" class="action-link">Nuestras Especialidades</a>
+                <a href="platillos.html" class="action-link">Platillos de Menú</a>
+            </div>
+        </div>
+
+        <div class="contact-image">
+            <img src="https://i.pinimg.com/originals/37/ff/6c/37ff6cb7574d105feaf19cf3e0595e40.jpg" alt="Restaurante elegante">
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <ul class="menu-footer">
+        <li class="menu-elem">
+            <a href="index.html" class="menu-icon">Inicio</a>
+        </li>
+        <li class="menu-elem">
+            <a href="menu.html" class="menu-icon">Nuestros Platos</a>
+        </li>
+        <li class="menu-elem">
+            <a href="sobre-nosotros.html" class="menu-icon">Sobre Nosotros</a>
+        </li>
+        <li class="menu-elem">
+            <a href="contactanos.html" class="menu-icon">Contáctanos</a>
+        </li>
+    </ul>
+    <div class="store-buttons">
+        <a href="#"><img src="img/disponibilidad app store.png" class="appstore" alt="Disponible en App Store"></a>
+        <a href="#"><img src="img/disponibilidad play store.png" alt="Disponible en Play Store" class="playstore"></a>
+    </div>
+    <p class="footer-text"> COPYRIGHT © 2025 - LUNA DI SEDA </p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+
+    function toggleContenido() {
+        const contenido = document.getElementById("contenido");
+        const boton = document.querySelector(".toggle-button");
+
+        contenido.classList.toggle("mostrar");
+
+        if (contenido.classList.contains("mostrar")) {
+            boton.textContent = "Cerrar";
+        } else {
+            boton.textContent = "¡Ordena ya!";
+        }
+    }
+</script>
+</body>
+</html>

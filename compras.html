@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Compras - Luna Di Seda</title>
+    <link rel="stylesheet" href="compras.css">
+    </head>
+<body>
+
+    <div id="header-div">
+        <nav class="header">
+            <div class="menu" id="menu">
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <div class="menu-links">
+                    <a href="index.html">Inicio</a>
+                    <div id="contenedor">
+                        <a href="menu.html">Menú
+                            <div class="container">
+                                <a href="Especialidades.html">Especialidades</a>
+                                <a href="Carta-de-Vinos.html">Carta de Vinos</a>
+                                <a href="menu.html">Menú Completo</a>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="contactanos.html">Contáctanos</a>
+                    <a href="compras.html" class="cart-icon">
+                        <img src="/img/carrito-de-compras2" alt="Comprar" title="Ir a la página de compra">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="contenido">
+            <h1>Bienvenido a tus Compras</h1>
+            <p>Revisa tu selección antes de finalizar tu pedido.</p>
+        </div>
+
+        <section class="compras-page">
+            <div class="compras-header">
+                <h2>Tu Pedido</h2>
+                <a href="menu.html" class="volver-menu-btn">← Volver al Menú</a>
+            </div>
+
+            <div class="carrito-items-container">
+                <h3>Productos en tu carrito:</h3>
+                <div id="lista-carrito">
+                    <div class="purchased-item">
+                        <span class="item-name">Pizza Napolitana</span>
+                        <span class="item-price">$14.99</span>
+                    </div>
+                    <div class="purchased-item">
+                        <span class="item-name">Bebida Fría Limoncello</span>
+                        <span class="item-price">$31.99</span>
+                    </div>
+                    </div>
+
+                <div class="resumen-pedido">
+                    <p>Subtotal: <span id="subtotal">$46.98</span></p>
+                    <p>Envío: <span id="envio">$3.50</span></p>
+                    <h3>Total: <span id="total">$50.48</span></h3>
+                </div>
+
+                <button id="finalizar-compra-btn" class="finalizar-compra-btn">Finalizar Compra</button>
+            </div>
+        </section>
+
+        <section class="ordenes-ejemplo">
+            <h2>Ejemplo de tus Artículos Agregados Recientemente</h2>
+            <div class="fila-ordenes">
+                <div class="menu-item">
+                    <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480/img/recipe/ras/Assets/48a49653c8716457eb0b2f7eb3c7d74c/Derivates/8d83d9ed4567fa15456d8eec7557e60006a15576.jpg" alt="Pizza Napolitana" class="item-image">
+                    <h2 class="item-title">Pizza Napolitana</h2>
+                    <p class="item-description">Quesos, jamón, tomate, pimentón, champiñón, orégano y aceituna. Envuelto en nuestra suave y crujiente masa de trigo y harina.</p>
+                    <span class="item-price">$14.99</span>
+                    <button class="item-agregar-compra">¡Agregado!</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://m.media-amazon.com/images/I/81YSXtpETEL._UF350,350_QL80_.jpg" alt="Limoncello" class="item-image">
+                    <h2 class="item-title">Limoncello</h2>
+                    <p class="item-description">Licor típico de Italia, obtenido por la maceración en alcohol de la cáscara de limón y otros cítricos, mezclado con jarabe de agua y azúcar.</p>
+                    <span class="item-price">$31.99</span>
+                    <button class="item-agregar-compra">¡Agregado!</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <ul class="menu-footer">
+            <li class="menu-elem"><a href="index.html" class="menu-icon">Inicio</a></li>
+            <li class="menu-elem"><a href="menu.html" class="menu-icon">Menú</a></li>
+            <li class="menu-elem"><a href="sobre-nosotros.html" class="menu-icon">Sobre Nosotros</a></li>
+            <li class="menu-elem"><a href="contactanos.html" class="menu-icon">Contáctanos</a></li>
+        </ul>
+        <div class="store-buttons">
+            <a href="#"><img src="img/disponibilidad play store.png" alt="Google Play" class="playstore"></a>
+            <a href="#"><img src="img/disponibilidad app store.png" alt="App Store" class="appstore"></a>
+        </div>
+        <p class="footer-text">COPYRIGHT © 2025 - LUNA DI SEDA</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
